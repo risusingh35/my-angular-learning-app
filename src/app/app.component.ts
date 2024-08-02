@@ -10,4 +10,15 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'my-angular-learning-app';
+  count = 0
+
+  handleClick(opt: string) {
+
+    if (opt == '+') {
+      this.count++
+    } else {
+      if(!this.count)return;
+      this.count--
+    }
+  }
 }
